@@ -336,7 +336,7 @@ const ServiceForm = () => {
                     className="form-input"
                   >
                     <option value="">Select timeline</option>
-                    <option value="immediate">Immediate (< 2 weeks)</option>
+                    <option value="immediate">Immediate (&lt; 2 weeks)</option>
                     <option value="month">Within 1 month</option>
                     <option value="quarter">Within 3 months</option>
                     <option value="flexible">Flexible timeline</option>
