@@ -41,7 +41,7 @@ const Hero = () => {
             repeat: Infinity,
             repeatType: 'loop',
             ease: 'easeInOut',
-          }}
+            top: `${50 + y}px`,
           className={`absolute text-red-500/30 ${size} blur-sm hidden md:block`}
         >
           <Icon className="w-full h-full drop-shadow-2xl" />
