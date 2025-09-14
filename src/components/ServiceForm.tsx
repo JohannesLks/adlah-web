@@ -359,7 +359,7 @@ const ServiceForm = () => {
                     className="form-input"
                   >
                     <option value="">Select budget range</option>
-                    <option value="under-5k">Under $5,000</option>
+                    <option value="under-5k">&lt; $5,000</option>
                     <option value="5k-15k">$5,000 - $15,000</option>
                     <option value="15k-50k">$15,000 - $50,000</option>
                     <option value="50k-plus">$50,000+</option>
