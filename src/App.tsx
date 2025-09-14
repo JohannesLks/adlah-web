@@ -9,16 +9,18 @@ import MatrixBackground from './components/MatrixBackground';
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark-950 text-white relative">
+    <div className="min-h-screen bg-dark-950 text-white relative overflow-x-hidden">
       <MatrixBackground />
-      <Header />
-      <main>
-        <Hero />
-        <Features />
-        <Architecture />
-        <ServiceForm />
-      </main>
-      <Footer />
+      <div className="relative z-10">
+        <Header />
+        <main>
+          <Hero />
+          <Features />
+          <Architecture />
+          <ServiceForm />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

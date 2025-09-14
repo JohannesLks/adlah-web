@@ -18,7 +18,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 pb-8">
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 cyber-grid opacity-20" />
       <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-red-800/10" />
@@ -42,13 +42,13 @@ const Hero = () => {
             repeatType: 'loop',
             ease: 'easeInOut',
           }}
-          className={`absolute text-red-500/30 ${size} blur-sm`}
+          className={`absolute text-red-500/30 ${size} blur-sm hidden md:block`}
         >
           <Icon className="w-full h-full drop-shadow-2xl" />
         </motion.div>
       ))}
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
