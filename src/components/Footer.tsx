@@ -153,13 +153,13 @@ const Footer = () => {
                   <li key={linkIndex}>
                     <motion.a
                       href={link.href}
-                      target={link.external ? '_blank' : undefined}
-                      rel={link.external ? 'noopener noreferrer' : undefined}
+                      target={'external' in link && link.external ? '_blank' : undefined}
+                      rel={'external' in link && link.external ? 'noopener noreferrer' : undefined}
                       whileHover={{ x: 5 }}
                       className="text-dark-300 hover:text-primary-400 transition-colors duration-200 flex items-center space-x-1 group"
                     >
                       <span>{link.name}</span>
-                      {link.external && (
+                      {'external' in link && link.external && (
                         <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       )}
                     </motion.a>
