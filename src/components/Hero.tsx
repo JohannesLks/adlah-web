@@ -3,13 +3,6 @@ import { motion } from 'framer-motion';
 import { Shield, Zap, Brain, Network, ArrowRight, Github, BookOpen, Play, Star, Target, Activity } from 'lucide-react';
 
 const Hero = () => {
-  const floatingIcons = [
-    { Icon: Shield, delay: 0, x: 150, y: 80, size: 'w-20 h-20' },
-    { Icon: Brain, delay: 0.5, x: -120, y: 100, size: 'w-16 h-16' },
-    { Icon: Network, delay: 1, x: 180, y: -80, size: 'w-18 h-18' },
-    { Icon: Zap, delay: 1.5, x: -150, y: -60, size: 'w-14 h-14' },
-  ];
-
   const stats = [
     { label: 'Detection Speed', value: '<100ms', icon: '⚡', color: 'text-yellow-400' },
     { label: 'Accuracy Rate', value: '99.7%', icon: '🎯', color: 'text-green-400' },
@@ -29,35 +22,6 @@ const Hero = () => {
       {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-red-900/10 via-transparent to-blue-900/5" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(220,38,38,0.1)_0%,transparent_70%)]" />
-      
-      {/* Floating Tech Icons */}
-      {floatingIcons.map(({ Icon, delay, x, y, size }, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, scale: 0, rotate: -180 }}
-          animate={{ 
-            opacity: [0.1, 0.3, 0.1], 
-            scale: [0.8, 1.2, 0.8],
-            rotate: [0, 360],
-            x: [0, x * 0.5, x, x * 0.3, 0],
-            y: [0, y * 0.3, y, y * 0.7, 0],
-          }}
-          transition={{
-            delay,
-            duration: 20,
-            repeat: Infinity,
-            repeatType: 'loop',
-            ease: 'easeInOut',
-          }}
-          className={`absolute text-red-500/20 ${size} blur-sm hidden lg:block`}
-          style={{
-            top: `${50 + y}px`,
-            left: `${50 + x}px`,
-          }}
-        >
-          <Icon className="w-full h-full drop-shadow-2xl" />
-        </motion.div>
-      ))}
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
         <motion.div
@@ -85,16 +49,16 @@ const Hero = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="mb-12"
           >
-            <h1 className="text-responsive-xl font-black mb-6 leading-none tracking-tight">
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-6 leading-none tracking-tight">
               <span className="block">
-                <span className="gradient-text glitch neon-text font-['Orbitron']" data-text="ADLAH">
+                <span className="gradient-text font-mono neon-text">
                   ADLAH
                 </span>
               </span>
-              <span className="block text-5xl md:text-7xl lg:text-8xl mt-6 text-white/90 font-light">
+              <span className="block text-4xl md:text-6xl lg:text-7xl mt-6 text-white/90 font-light">
                 Adaptive Deep Learning
               </span>
-              <span className="block text-4xl md:text-6xl lg:text-7xl mt-4 gradient-text-alt font-medium">
+              <span className="block text-3xl md:text-5xl lg:text-6xl mt-4 gradient-text-alt font-medium">
                 Anomaly Detection Honeynet
               </span>
             </h1>
